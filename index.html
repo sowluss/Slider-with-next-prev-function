@@ -25,6 +25,18 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.next').click(function () {
+        $('.slide').find('div.active').next().addClass('active');
+        $('.slide').find('div.active').prev().removeClass('active');
+      })
+      $('.prev').click(function () {
+        $('.slide').find('div.active').prev().addClass('active');
+        $('.slide').find('div.active').next().removeClass('active');
+      })
+    })
+  </script>
 </body>
 
 </html>
